@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MapsExamp</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="i_am_here">Map</string>
+
+</resources>
