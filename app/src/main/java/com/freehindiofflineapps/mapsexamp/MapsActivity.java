@@ -138,8 +138,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onLocationChanged(Location location) {
         String msg = "Updated Location : " + Double.toString(location.getLatitude()) + "," +
                 Double.toString(location.getLongitude());
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        latLng = new LatLng(location.getLatitude(), location.getLongitude());
+         latLng = new LatLng(location.getLatitude(), location.getLongitude());
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
@@ -212,6 +211,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (latLng != null) {
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Current Location"));
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14F));
+
         }
 
     }
